@@ -1,5 +1,7 @@
 import logo from "../../assets/logo.jpeg";
-import { Mail, MapPin } from "lucide-react";
+import {
+    Mail, MapPin, Heart
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -27,15 +29,21 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="flex-1 min-w-[200px]">
-                    <h3 style={{ fontFamily: "Playfair Display, serif" }} className="text-white text-xl font-bold mb-4">Contact</h3>
-                    <ul className="flex flex-col gap-3">
-                        <li className="flex items-center gap-2 text-lg"><Mail size={20} /> info@arivantrust.org</li>
-                        <li className="flex items-center gap-2 text-lg"><MapPin size={20} /> Tamil Nadu, India</li>
-                    </ul>
+                    <nav>
+
+                        <h3 style={{ fontFamily: "Playfair Display, serif" }} className="text-white text-xl font-bold mb-4">Contact</h3>
+                        <ul className="flex flex-col gap-3">
+                            <li className="flex items-center gap-2 text-lg"><Mail size={20} /> info@arivantrust.org</li>
+                            <li className="flex items-center gap-2 text-lg"><MapPin size={20} /> Tamil Nadu, India</li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div className="max-w-6xl mx-auto pt-6 text-center text-[#b6e0d3] text-[16px]">
-                © 2026 Arivan Trust. All Rights Reserved.
+            <div className="px-10 max-w-6xl mx-auto pt-6 text-center flex justify-between text-[#b6e0d3] text-[16px]">
+                <p>
+                    © 2026 Arivan Trust. All Rights Reserved.
+                </p>
+                <p>Developed with ❤️ by Arivan Trust</p>
             </div>
         </footer>
     );
