@@ -10,15 +10,15 @@ import About from "./components/about";
 
 const App = () => {
   return (
-    <Router>
+    <>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomeMain />} />
-        <Route path="/" element={<About />} />       
+        <Route path="/about" element={<About />} />       
         <Route path="/contact" element={<ContactMain />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 };
 
