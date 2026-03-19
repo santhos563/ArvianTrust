@@ -1,4 +1,3 @@
-
 import { EnvelopeIcon, MapPinIcon, CheckIcon } from "@heroicons/react/24/outline";
 import { useForm } from "react-hook-form";
 import emailjs from '@emailjs/browser';
