@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { EnvelopeIcon, MapPinIcon, CheckIcon } from "@heroicons/react/24/outline";
 import { useForm } from "react-hook-form";
 import emailjs from '@emailjs/browser';
@@ -264,3 +265,15 @@ const ContactMain = () => {
 };
 
 export default ContactMain;
+=======
+const ContactMain = () => {
+    return (
+        <div className="contact-main">
+            <h1>Contact Main</h1>
+        </div>
+    )
+}
+
+
+export default ContactMain;
+>>>>>>> 8dab6d5449b24aff156a556c78adca3579567237

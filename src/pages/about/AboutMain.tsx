@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import book from '../../assets/book.avif';
 
@@ -265,3 +266,14 @@ const About = () => {
 };
 
 export default About;
+=======
+const AboutMain = () => {
+    return (
+        <div className="about-main">
+            <h1>About Main</h1>
+        </div>
+    )
+}
+
+export default AboutMain;
+>>>>>>> 8dab6d5449b24aff156a556c78adca3579567237
