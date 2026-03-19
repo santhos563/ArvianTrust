@@ -1,4 +1,3 @@
-
 import { Activities } from "../../components/shared/Activities";
 import { Gallery } from "../../components/shared/Gallery";
 // import { DonateSection } from "../../components/shared/DonateSection";
@@ -20,6 +19,7 @@ const HomeMain = () => {
             {/* <div id="donate-section">
                 <DonateSection />
             </div> */}
+
 
         </div>
     )
