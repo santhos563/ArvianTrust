@@ -1,6 +1,7 @@
 import logo from "../../assets/logo.jpeg";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const NavBar = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -280,6 +281,7 @@ const NavBar = () => {
                         </div>
                     )}
                 </div>
+                <LanguageSwitcher />
             </header>
         </div>
     );

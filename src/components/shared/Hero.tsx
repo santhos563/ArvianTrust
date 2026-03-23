@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export function Hero() {
+    const { t } = useTranslation();
+
     return (
         <section className="relative bg-gradient-to-br from-[#1F6F5E] to-[#134E44] text-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
@@ -10,33 +13,27 @@ export function Hero() {
                         <h2
                             className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
                             style={{ fontFamily: "'Playfair Display', serif" }}
-                        >
-                            Helping Children<br />
-                            <span className="text-[#E6F2EF]">Grow Higher Through Education</span>
-                        </h2>
+                            dangerouslySetInnerHTML={{ __html: t('hero.title') }}
+                        />
                         <p
                             className="text-lg md:text-xl text-white/90 leading-relaxed"
                             style={{ fontFamily: "'Inter', sans-serif" }}
-                        >
-                            At Arivan Trust, we believe education is the ladder to a brighter future. We support
-                            underprivileged and orphaned children with <strong>books, stationery, school uniforms,
-                                nutritious meals, and festival clothes</strong> — giving them everything they need to
-                            learn, grow, and reach their highest potential.
-                        </p>
+                            dangerouslySetInnerHTML={{ __html: t('hero.description') }}
+                        />
                         <div className="flex flex-wrap gap-4 pt-4">
                             <Link
                                 to="/about"
                                 className="px-8 py-3 bg-[#134E44] hover:bg-[#0F3D35] text-white rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                Learn More
+                                {t('hero.learnMore')}
                             </Link>
                             <Link
                                 to="/contact"
                                 className="px-8 py-3 bg-white text-[#1F6F5E] hover:bg-[#E6F2EF] rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                Get Involved
+                                {t('hero.getInvolved')}
                             </Link>
                         </div>
                     </div>
@@ -46,7 +43,7 @@ export function Hero() {
                         <div className="absolute inset-0 bg-[#2E8B75] rounded-2xl transform rotate-3 opacity-20"></div>
                         <img
                             src="https://images.unsplash.com/flagged/photo-1574097656146-0b43b7660cb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBzdHVkZW50cyUyMGNsYXNzcm9vbSUyMGVkdWNhdGlvbnxlbnwxfHx8fDE3NzI3ODU2NTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                            alt="Children studying and learning"
+                            alt={t('hero.imageAlt')}
                             className="rounded-2xl shadow-2xl relative z-10 hover:scale-105 transition-transform duration-500"
                         />
                     </div>

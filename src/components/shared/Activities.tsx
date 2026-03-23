@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import artExhibition1 from "../../assets/image5.png";
 import artExhibition2 from "../../assets/image4.jpeg";
 import artExhibition3 from "../../assets/image3.jpeg";
@@ -10,6 +11,8 @@ import oldage2 from "../../assets/image 6.jpeg";
 import oldage3 from '../../assets/image 8.jpeg';
 
 export function Activities() {
+    const { t } = useTranslation();
+    
     // Image arrays for each box
     const box1Images = [
         artExhibition1,  // Your first custom image
@@ -74,11 +77,11 @@ export function Activities() {
             id: 1,
             images: box1Images,
             currentIndex: box1Index,
-            title: "ART EXHIBITION 2025",
-            heading: "For Young Artists by Our Trust",
-            description: "Arivan Trust organized the Art Exhibition at the historic World Tamil Sangam campus in Madurai. The event provided a prestigious platform for talented young artists to showcase their creativity and passion to the world.",
-            fullDescription: "The exhibition featured stunning paintings, intricate crafts, and diverse artistic expressions from children across the region. By displaying their work at this iconic venue, we aimed to motivate and encourage these young talents, giving them the confidence to pursue their artistic dreams and share their gift with society.",
-            location: "World Tamil Sangam Campus, Madurai",
+            titleKey: "activities.art_exhibition.title",
+            headingKey: "activities.art_exhibition.heading",
+            descriptionKey: "activities.art_exhibition.description",
+            fullDescriptionKey: "activities.art_exhibition.fullDescription",
+            locationKey: "activities.art_exhibition.location",
             color: "border-[#C46A2D]",
             gradientFrom: "#C46A2D",
             gradientTo: "#B55A1D"
@@ -87,10 +90,11 @@ export function Activities() {
             id: 2,
             images: box2Images,
             currentIndex: box2Index,
-            title: "Children Helping Children",
-            heading: "Empowering Young Hearts",
-            description: "At Arivan Trust, we believe every child deserves to feel loved and cherished. Through our Children Helping Children initiative, we embrace orphaned and underprivileged children as our own family, providing them with new clothes and special festival dresses so they can celebrate every occasion with joy and dignity, just like any other child.",
-            fullDescription: "We ensure that no child feels left out during festivals and special occasions. By gifting them beautiful new clothes and celebrating with them, we create memories of warmth and belonging. Our volunteers spend time with these children, making them feel that they are part of a larger family that cares for them deeply.",
+            titleKey: "activities.children_helping.title",
+            headingKey: "activities.children_helping.heading",
+            descriptionKey: "activities.children_helping.description",
+            fullDescriptionKey: "activities.children_helping.fullDescription",
+            locationKey: "activities.children_helping.location",
             color: "border-[#1F6F5E]",
             gradientFrom: "#1F6F5E",
             gradientTo: "#134E44"
@@ -99,10 +103,11 @@ export function Activities() {
             id: 3,
             images: box3Images,
             currentIndex: box3Index,
-            title: "DRUG AWARENESS 2025",
-            heading: "For College Students & Staff",
-            description: "Arivan Trust organizes comprehensive drug awareness programs in colleges, reaching out to both students and staff members. These sessions aim to educate the entire college community about the dangers of substance abuse and create a supportive environment for prevention.",
-            fullDescription: "Our awareness campaigns include interactive seminars, expert talks, and counseling sessions for students and faculty alike. We believe that when both students and staff are aware and united, they can create a campus culture that actively discourages substance abuse and promotes healthy lifestyle choices. Together, we build a community that protects and supports its young minds.",
+            titleKey: "activities.drug_awareness.title",
+            headingKey: "activities.drug_awareness.heading",
+            descriptionKey: "activities.drug_awareness.description",
+            fullDescriptionKey: "activities.drug_awareness.fullDescription",
+            locationKey: "activities.drug_awareness.location",
             color: "border-[#1F6F5E]",
             gradientFrom: "#1F6F5E",
             gradientTo: "#134E44"
@@ -111,10 +116,11 @@ export function Activities() {
             id: 4,
             images: box4Images,
             currentIndex: box4Index,
-            title: "Old Age Home Support",
-            heading: "Mudhal Thunaivan",
-            description: "At Arivan Trust, we honor the elderly as we would our own parents. Through our Mudhal Thunaivan initiative, we visit old age homes regularly to spend time with the residents, providing them with clothes, nutritious food, and essential supplies, but most importantly, giving them the love and respect they deserve.",
-            fullDescription: "We believe that every elderly person deserves to feel valued and cared for. Our volunteers sit with them, listen to their stories, share meals, and celebrate festivals together. By treating them as our own family, we bring warmth and joy to their lives, ensuring they never feel forgotten or alone in their golden years.",
+            titleKey: "activities.old_age_support.title",
+            headingKey: "activities.old_age_support.heading",
+            descriptionKey: "activities.old_age_support.description",
+            fullDescriptionKey: "activities.old_age_support.fullDescription",
+            locationKey: "activities.old_age_support.location",
             color: "border-[#C46A2D]",
             gradientFrom: "#C46A2D",
             gradientTo: "#B55A1D"
@@ -130,7 +136,7 @@ export function Activities() {
                         className="text-3xl md:text-4xl font-bold text-[#1F6F5E] mb-4"
                         style={{ fontFamily: "'Playfair Display', serif" }}
                     >
-                        Our Activities
+                        {t('activities.sectionTitle')}
                     </h2>
                     <div className="w-24 h-1 bg-[#2E8B75] mx-auto"></div>
                 </div>
@@ -145,7 +151,7 @@ export function Activities() {
                                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                                         <img
                                             src={activity.images[activity.currentIndex]}
-                                            alt={activity.title}
+                                            alt={t(activity.titleKey)}
                                             className="w-full h-full object-cover transition-opacity duration-1000"
                                         />
                                         {/* Fixed gradient overlay */}
@@ -174,31 +180,31 @@ export function Activities() {
                                     <div>
                                         <div className="uppercase text-2xl md:text-3xl font-bold text-[#1F6F5E] mb-2"
                                             style={{ fontFamily: "'Playfair Display', serif" }}>
-                                            {activity.title}
+                                            {t(activity.titleKey)}
                                         </div>
                                         <h3
                                             className="text-xl md:text-2xl font-semibold text-[#C46A2D] mb-4"
                                             style={{ fontFamily: "'Inter', sans-serif" }}
                                         >
-                                            {activity.heading}
+                                            {t(activity.headingKey)}
                                         </h3>
                                         <p
                                             className="text-[#5A6A68] text-base leading-relaxed mb-4"
                                             style={{ fontFamily: "'Inter', sans-serif" }}
                                         >
-                                            {activity.description}
+                                            {t(activity.descriptionKey)}
                                         </p>
                                         <p
                                             className="text-[#5A6A68] text-base leading-relaxed mb-4"
                                             style={{ fontFamily: "'Inter', sans-serif" }}
                                         >
-                                            {activity.fullDescription}
+                                            {t(activity.fullDescriptionKey)}
                                         </p>
                                         <p
                                             className="text-[#5A6A68] text-base font-medium mb-6"
                                             style={{ fontFamily: "'Inter', sans-serif" }}
                                         >
-                                            📍 {activity.location}
+                                            📍 {t(activity.locationKey)}
                                         </p>
                                     </div>
                                 </div>
@@ -209,7 +215,7 @@ export function Activities() {
                                             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                                                 <img
                                                     src={activity.images[activity.currentIndex]}
-                                                    alt={activity.title}
+                                                    alt={t(activity.titleKey)}
                                                     className="w-full h-full object-cover transition-opacity duration-1000"
                                                 />
                                                 {/* Fixed gradient overlay */}
@@ -234,26 +240,26 @@ export function Activities() {
 
                                             <div>
                                                 <div className="uppercase text-sm font-semibold tracking-wider text-[#C46A2D] mb-2">
-                                                    {activity.title}
+                                                    {t(activity.titleKey)}
                                                 </div>
                                                 <h3
                                                     className="text-3xl md:text-4xl font-bold text-[#1F6F5E] mb-4"
                                                     style={{ fontFamily: "'Playfair Display', serif" }}
                                                 >
-                                                    {activity.heading}
+                                                    {t(activity.headingKey)}
                                                 </h3>
                                                 <p
                                                     className="text-[#5A6A68] text-base md:text-lg leading-relaxed mb-4"
                                                     style={{ fontFamily: "'Inter', sans-serif" }}
                                                 >
-                                                    {activity.description}
+                                                    {t(activity.descriptionKey)}
                                                 </p>
-                                                {activity.fullDescription && (
+                                                {t(activity.fullDescriptionKey) && (
                                                     <p
                                                         className="text-[#5A6A68] text-base leading-relaxed mb-6"
                                                         style={{ fontFamily: "'Inter', sans-serif" }}
                                                     >
-                                                        {activity.fullDescription}
+                                                        {t(activity.fullDescriptionKey)}
                                                     </p>
                                                 )}
                                             </div>
@@ -262,26 +268,26 @@ export function Activities() {
                                         <>
                                             <div>
                                                 <div className="uppercase text-sm font-semibold tracking-wider text-[#C46A2D] mb-2">
-                                                    {activity.title}
+                                                    {t(activity.titleKey)}
                                                 </div>
                                                 <h3
                                                     className="text-3xl md:text-4xl font-bold text-[#1F6F5E] mb-4"
                                                     style={{ fontFamily: "'Playfair Display', serif" }}
                                                 >
-                                                    {activity.heading}
+                                                    {t(activity.headingKey)}
                                                 </h3>
                                                 <p
                                                     className="text-[#5A6A68] text-base md:text-lg leading-relaxed mb-4"
                                                     style={{ fontFamily: "'Inter', sans-serif" }}
                                                 >
-                                                    {activity.description}
+                                                    {t(activity.descriptionKey)}
                                                 </p>
-                                                {activity.fullDescription && (
+                                                {t(activity.fullDescriptionKey) && (
                                                     <p
                                                         className="text-[#5A6A68] text-base leading-relaxed mb-6"
                                                         style={{ fontFamily: "'Inter', sans-serif" }}
                                                     >
-                                                        {activity.fullDescription}
+                                                        {t(activity.fullDescriptionKey)}
                                                     </p>
                                                 )}
                                             </div>
@@ -289,7 +295,7 @@ export function Activities() {
                                             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                                                 <img
                                                     src={activity.images[activity.currentIndex]}
-                                                    alt={activity.title}
+                                                    alt={t(activity.titleKey)}
                                                     className="w-full h-full object-cover transition-opacity duration-1000"
                                                 />
                                                 {/* Fixed gradient overlay */}
