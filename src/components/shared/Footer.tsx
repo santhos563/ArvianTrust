@@ -86,7 +86,7 @@ const Footer = () => {
                         {/* Social Media Icons */}
                         <div className="flex gap-3">
                             <a
-                                href="https://www.instagram.com/arivantrust"
+                                href="https://www.instagram.com/arivan_trust?igsh=MXhhbG02bHVnZjF2cA=="
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-[#256055] p-2.5 rounded-full hover:bg-[#C46A2D] transition-all duration-300 hover:-translate-y-1 shadow-md shadow-black/20"

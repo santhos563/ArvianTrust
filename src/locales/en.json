@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "activities": "Activities",
+    "contact": "Contact"
+  },
+  "languageSwitcher": {
+    "english": "English",
+    "tamil": "தமிழ்"
+  },
+  "home": {
+    "hero": {
+      "title": "Arivan Trust",
+      "subtitle": "Empowering Children Through Education"
+    },
+    "donate": {
+      "title": "Support Our Cause",
+      "subtitle": "Your Contribution Can Change a Life",
+      "button": "Donate Now"
+    }
+  },
+  "about": {
+    "header": {
+      "established": "Est. 2022 · Tamil Nadu, India",
+      "title": "About Arivan Trust",
+      "description": "Arivan Trust is an <strong>education-focused organization</strong> founded in 2022. We help underprivileged and orphaned children by giving them everything they need to stay in school — because an educated child can change their family's future."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To ensure every child has access to quality education. We believe a child cannot learn if they are hungry, embarrassed, or lack basic resources — so we remove every barrier that stands between a child and their classroom.",
+      "icon": "Mission"
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "A future where <strong>every child completes their education</strong> and no child drops out because their family cannot afford to keep them in school. We dream of educated children becoming teachers, doctors, and leaders who lift their families and communities.",
+      "icon": "Vision"
+    },
+    "work": {
+      "label": "Our Work",
+      "title": "How We Support Education",
+      "image": {
+        "caption": "Comprehensive Support",
+        "heading": "Everything a Child Needs to Succeed",
+        "description": "We give children the resources, dignity, and support they need to show up, sit down, and truly learn."
+      },
+      "cards": [
+        {
+          "title": "Books & Study Materials",
+          "description": "Textbooks, notebooks, and learning guides so children can study, do homework, and prepare for exams without worrying about missing resources."
+        },
+        {
+          "title": "Daily Stationery",
+          "description": "Pens, pencils, notebooks, and geometry boxes — the essential tools every child needs to write, learn, and participate in class every day."
+        },
+        {
+          "title": "Sports & Activities",
+          "description": "Supporting children in sports, arts, and cultural activities so they develop confidence, teamwork, and discover their hidden talents."
+        },
+        {
+          "title": "School Uniforms",
+          "description": "New, clean uniforms so every child can attend school with confidence and dignity, just like their classmates."
+        },
+        {
+          "title": "Nutritious Meals",
+          "description": "Regular meals so no child has to learn on an empty stomach. Good food helps children focus, concentrate, and grow."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Help a Child Get an Education",
+      "description": "We've helped hundreds of children stay in school since 2022 — but many more are still waiting for support. <strong>Your contribution can write a child's future.</strong>",
+      "button": "Support a Child's Education",
+      "note": "💡 100% of your donation goes directly to the children who need it most."
+    }
+  },
+  "activities": {
+    "sectionTitle": "Our Activities",
+    "art_exhibition": {
+      "title": "ART EXHIBITION 2025",
+      "heading": "For Young Artists by Our Trust",
+      "description": "Arivan Trust organized the Art Exhibition at the historic World Tamil Sangam campus in Madurai. The event provided a prestigious platform for talented young artists to showcase their creativity and passion to the world.",
+      "fullDescription": "The exhibition featured stunning paintings, intricate crafts, and diverse artistic expressions from children across the region. By displaying their work at this iconic venue, we aimed to motivate and encourage these young talents, giving them the confidence to pursue their artistic dreams and share their gift with society.",
+      "location": "World Tamil Sangam Campus, Madurai"
+    },
+    "children_helping": {
+      "title": "Children Helping Children",
+      "heading": "Empowering Young Hearts",
+      "description": "At Arivan Trust, we believe every child deserves to feel loved and cherished. Through our Children Helping Children initiative, we embrace orphaned and underprivileged children as our own family, providing them with new clothes and special festival dresses so they can celebrate every occasion with joy and dignity, just like any other child.",
+      "fullDescription": "We ensure that no child feels left out during festivals and special occasions. By gifting them beautiful new clothes and celebrating with them, we create memories of warmth and belonging. Our volunteers spend time with these children, making them feel that they are part of a larger family that cares for them deeply.",
+      "location": ""
+    },
+    "drug_awareness": {
+      "title": "DRUG AWARENESS 2025",
+      "heading": "For College Students & Staff",
+      "description": "Arivan Trust organizes comprehensive drug awareness programs in colleges, reaching out to both students and staff members. These sessions aim to educate the entire college community about the dangers of substance abuse and create a supportive environment for prevention.",
+      "fullDescription": "Our awareness campaigns include interactive seminars, expert talks, and counseling sessions for students and faculty alike. We believe that when both students and staff are aware and united, they can create a campus culture that actively discourages substance abuse and promotes healthy lifestyle choices. Together, we build a community that protects and supports its young minds.",
+      "location": ""
+    },
+    "old_age_support": {
+      "title": "Old Age Home Support",
+      "heading": "Mudhal Thunaivan",
+      "description": "At Arivan Trust, we honor the elderly as we would our own parents. Through our Mudhal Thunaivan initiative, we visit old age homes regularly to spend time with the residents, providing them with clothes, nutritious food, and essential supplies, but most importantly, giving them the love and respect they deserve.",
+      "fullDescription": "We believe that every elderly person deserves to feel valued and cared for. Our volunteers sit with them, listen to their stories, share meals, and celebrate festivals together. By treating them as our own family, we bring warmth and joy to their lives, ensuring they never feel forgotten or alone in their golden years.",
+      "location": ""
+    }
+  },
+  "contact": {
+    "page": {
+      "title": "Get In Touch",
+      "subtitle": "Have questions or want to support our cause? We'd love to hear from you."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "fields": {
+        "name": {
+          "label": "Full Name *",
+          "placeholder": "Enter your full name",
+          "error": "Full name is required"
+        },
+        "email": {
+          "label": "Email Address *",
+          "placeholder": "your.email@example.com",
+          "error": {
+            "required": "Email is required",
+            "invalid": "Enter valid email"
+          }
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "+91 1234567890",
+          "error": "Enter valid phone number"
+        },
+        "message": {
+          "label": "Message *",
+          "placeholder": "Tell us how we can help you...",
+          "error": "Message is required"
+        }
+      },
+      "button": {
+        "sending": "Sending...",
+        "send": "Send Message"
+      },
+      "status": {
+        "success": "Thank you for contacting us! We have sent a confirmation email to your inbox and will get back to you soon.",
+        "error": "Sorry, something went wrong. Please try again later or contact us directly at arivantrust2022@gmail.com"
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "Feel free to reach out to us through any of the following channels. We're here to answer your questions and discuss how you can help.",
+      "email": {
+        "label": "Email Us",
+        "address": "arivantrust2022@gmail.com"
+      },
+      "location": {
+        "label": "Our Location",
+        "address": "Tamil Nadu, India"
+      },
+      "support": {
+        "title": "Support Our Mission",
+        "description": "Every contribution helps us provide education and resources to children in need.",
+        "items": [
+          "Educational Materials",
+          "School Uniforms",
+          "Financial Support"
+        ]
+      }
+    }
+  },
+  "hero": {
+    "title": "Helping Children<br /><span class=\"text-[#E6F2EF]\">Grow Higher Through Education</span>",
+    "description": "At Arivan Trust, we believe education is the ladder to a brighter future. We support underprivileged and orphaned children with <strong>books, stationery, school uniforms, nutritious meals, and festival clothes</strong> — giving them everything they need to learn, grow, and reach their highest potential.",
+    "learnMore": "Learn More",
+    "getInvolved": "Get Involved",
+    "imageAlt": "Children studying and learning"
+  },
+  "gallery": {
+    "title": "Together We Make a Difference",
+    "description": "Every person contributes in their own way — with time, resources, skills, or simply a caring heart. Together, we create moments of joy and hope for those who need it most.",
+    "quote": "Every person has something beautiful to give — their time, their skills, their love. Together, we create a world where everyone belongs."
+  }
+}

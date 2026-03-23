@@ -1,11 +1,24 @@
 import logo from "../../assets/logo.jpeg";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
+    const { t } = useTranslation();
     const [mobileOpen, setMobileOpen] = useState(false);
     const [activeSection, setActiveSection] = useState<string>('');
     const location = useLocation();
+
+    // Scroll to top when location changes (for About and Contact pages)
+    useEffect(() => {
+        if (location.pathname === '/about' || location.pathname === '/contact') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    }, [location]);
 
     // Check active section based on URL hash or current page
     useEffect(() => {
@@ -41,8 +54,11 @@ const NavBar = () => {
         if (location.pathname === path) {
             e.preventDefault();
             scrollToTop();
+        } else {
+            // For navigation to different pages, let the navigation happen
+            // The useEffect will handle scrolling to top after navigation
+            setMobileOpen(false);
         }
-        setMobileOpen(false);
     };
 
     const scrollToSection = (sectionId: string) => {
@@ -64,15 +80,27 @@ const NavBar = () => {
     };
 
     const handleHomeClick = (e: React.MouseEvent) => {
-        handlePageClick('/', e);
+        if (location.pathname === '/') {
+            e.preventDefault();
+            scrollToTop();
+        }
+        setMobileOpen(false);
     };
 
     const handleAboutClick = (e: React.MouseEvent) => {
-        handlePageClick('/about', e);
+        if (location.pathname === '/about') {
+            e.preventDefault();
+            scrollToTop();
+        }
+        setMobileOpen(false);
     };
 
     const handleContactClick = (e: React.MouseEvent) => {
-        handlePageClick('/contact', e);
+        if (location.pathname === '/contact') {
+            e.preventDefault();
+            scrollToTop();
+        }
+        setMobileOpen(false);
     };
 
     const isActive = (path: string, sectionId?: string) => {
@@ -145,7 +173,7 @@ const NavBar = () => {
                                     }`}
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                Home
+                                {t('nav.home')}
                                 <span className={`absolute bottom-0 left-0 h-px bg-[#1F6F5E] transition-all duration-300 rounded-full ${isActive('/') ? 'w-full' : 'w-0 group-hover:w-full'
                                     }`} />
                             </Link>
@@ -157,7 +185,7 @@ const NavBar = () => {
                                     }`}
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                Our Activities
+                                {t('nav.activities')}
                                 <span className={`absolute bottom-0 left-0 h-px bg-[#1F6F5E] transition-all duration-300 rounded-full ${isActive('/', 'activities-section') ? 'w-full' : 'w-0 group-hover:w-full'
                                     }`} />
                             </button>
@@ -182,7 +210,7 @@ const NavBar = () => {
                                     }`}
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                About
+                                {t('nav.about')}
                                 <span className={`absolute bottom-0 left-0 h-px bg-[#1F6F5E] transition-all duration-300 rounded-full ${isActive('/about') ? 'w-full' : 'w-0 group-hover:w-full'
                                     }`} />
                             </Link>
@@ -195,14 +223,19 @@ const NavBar = () => {
                                     }`}
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                Contact
+                                {t('nav.contact')}
                                 <span className={`absolute bottom-0 left-0 h-px bg-[#1F6F5E] transition-all duration-300 rounded-full ${isActive('/contact') ? 'w-full' : 'w-0 group-hover:w-full'
                                     }`} />
                             </Link>
+
+                            {/* Language Switcher */}
+                            <LanguageSwitcher />
                         </nav>
 
                         {/* Mobile: Menu Only */}
-                        <div className="md:hidden flex items-center">
+                        <div className="md:hidden flex items-center gap-3">
+                            {/* Language Switcher for Mobile */}
+                            <LanguageSwitcher />
                             {/* Mobile menu button */}
                             <button
                                 onClick={() => setMobileOpen(!mobileOpen)}
@@ -233,7 +266,7 @@ const NavBar = () => {
                                     }`}
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                Home
+                                {t('nav.home')}
                             </Link>
 
                             {/* Our Activities - Mobile */}
@@ -243,7 +276,7 @@ const NavBar = () => {
                                     }`}
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                Our Activities
+                                {t('nav.activities')}
                             </button>
 
                             {/* Gallery - Mobile */}
@@ -264,7 +297,7 @@ const NavBar = () => {
                                     }`}
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                About
+                                {t('nav.about')}
                             </Link>
 
                             {/* Contact - Mobile */}
@@ -275,7 +308,7 @@ const NavBar = () => {
                                     }`}
                                 style={{ fontFamily: "'Inter', sans-serif" }}
                             >
-                                Contact
+                                {t('nav.contact')}
                             </Link>
                         </div>
                     )}
