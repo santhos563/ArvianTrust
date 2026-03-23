@@ -4,7 +4,7 @@ import book from '../../assets/book.avif';
 
 const About = () => {
     const { t } = useTranslation();
-    
+
     const cards = [
         {
             border: "#145A4A",
@@ -109,7 +109,7 @@ const About = () => {
                                 {t('about.vision.title')}
                             </h3>
                             <p className="text-gray-600 leading-relaxed font-light" style={{ fontFamily: "'Inter', sans-serif" }}
-                               dangerouslySetInnerHTML={{ __html: t('about.vision.description') }} />
+                                dangerouslySetInnerHTML={{ __html: t('about.vision.description') }} />
                         </div>
                     </div>
                 </div>
@@ -220,20 +220,21 @@ const About = () => {
                         className="text-2xl font-bold text-[#145A4A] mb-4"
                         style={{ fontFamily: "'Playfair Display', serif" }}
                     >
-                        {t('about.cta.title')}
+                        Help a Child Get an Education
                     </h3>
                     <p
                         className="text-gray-500 font-light leading-relaxed mb-7"
                         style={{ fontFamily: "'Inter', sans-serif" }}
-                        dangerouslySetInnerHTML={{ __html: t('about.cta.description') }}
-                    />
+                    >
+                        We've helped hundreds of children stay in school since 2022 — but many more are still waiting for support. Your contribution can write a child's future.
+                    </p>
                     <div className="flex flex-wrap gap-4 justify-center mb-5">
                         <a
                             href="/contact"
                             className="inline-flex items-center gap-2 px-7 py-3 bg-[#C46A2D] hover:bg-[#B55A1D] text-white text-sm font-medium rounded-full transition-all hover:-translate-y-0.5 hover:shadow-xl shadow-md shadow-[#C46A2D]/25"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                         >
-                            {t('about.cta.button')}
+                            Support a Child's Education
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
@@ -243,7 +244,7 @@ const About = () => {
                         className="text-xs text-gray-400 font-light"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                        {t('about.cta.note')}
+                        💡 100% of your donation goes directly to the children who need it most.
                     </p>
                 </div>
             </div>

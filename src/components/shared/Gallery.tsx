@@ -19,14 +19,14 @@ export function Gallery() {
                         className="text-3xl md:text-4xl font-bold text-[#1F6F5E] mb-4"
                         style={{ fontFamily: "'Playfair Display', serif" }}
                     >
-                        {t('gallery.title')}
+                        Together We Make a Difference
                     </h2>
                     <div className="w-24 h-1 bg-[#2E8B75] mx-auto mb-6"></div>
                     <p
                         className="text-lg text-[#5A6A68] max-w-3xl mx-auto"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                        {t('gallery.description')}
+                        Every person contributes in their own way — with time, resources, skills, or simply a caring heart. Together, we create moments of joy and hope for those who need it most.
                     </p>
                 </div>
 
